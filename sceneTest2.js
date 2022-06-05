@@ -212,7 +212,7 @@ class sceneTest2 extends Phaser.Scene {
         this.currentDialogue = [""];
         this.stepDialogue = 0;
         this.dialogueSymitrielIntro = ["May, merci d'être venue à mon \n secours. Je ne connais pas la \n  cause du mal qui me ronge, \n et mon peuple a disparu. \n Je ne suis plus en mesure de \n protéger la forêt.", "Je t'en prie, découvre ce qui \n m'arrive et retrouve mes amis.", "Tiens prends ces graines et \n cette partition, tu pourras \n les faire pousser pour te défendre."]
-        this.dialogueSymitriel = ["Ah t'es en dèche de graines?", "Tiens en revoila et grouille ton \n cul pour me sauver"]
+        this.dialogueSymitriel = ["Tiens revoilà des graines ! "]
 
         this.hpText = this.add.text(-1200, -600, this.hp).setScrollFactor(0).setScale(5);
         this.seedText = this.add.text(2850, 1500,  this.seedCount).setScrollFactor(0).setScale(10);

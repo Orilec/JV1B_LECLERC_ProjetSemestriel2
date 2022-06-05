@@ -109,7 +109,7 @@ class zone3 extends Phaser.Scene {
 
 
         map5.getObjectLayer('wood').objects.forEach((wood) => {
-            const woodSprite = this.wood.create(wood.x, wood.y - 100, 'wood').setOrigin(0);
+            const woodSprite = this.wood.create(wood.x, wood.y - 100, 'wood').setScale(1.5).setOrigin(0);
             woodSprite.setPushable(false);
             woodSprite.body.setAllowGravity(false);
             woodSprite.setCollideWorldBounds(true);
@@ -117,7 +117,7 @@ class zone3 extends Phaser.Scene {
         })
 
         map5.getObjectLayer('horizontal_wood').objects.forEach((wood) => {
-            const woodSprite = this.wood.create(wood.x, wood.y - 100, 'horizontalWood').setOrigin(0);
+            const woodSprite = this.wood.create(wood.x, wood.y - 100, 'horizontalWood').setScale(1.5).setOrigin(0);
             woodSprite.setPushable(false);
             woodSprite.body.setAllowGravity(false);
             woodSprite.setCollideWorldBounds(true);
@@ -366,7 +366,9 @@ class zone3 extends Phaser.Scene {
             hitbox.destroy();
             this.scene.scene.intro = false;
             this.scene.scene.currentDialogue = this.scene.scene.dialoguePetitSinge;
-
+            setTimeout(() => {
+                this.scene.stop();
+            }, 10000);
         }
 
         // function passageScene1() {
